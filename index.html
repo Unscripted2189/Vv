@@ -2,27 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Happy Valentine's My Love ❤️</title>
+  <title>Happy Valentine's Polynile ❤️</title>
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #ff4e50, #fc913a);
+      background: linear-gradient(to right, #d8f3dc, #b7e4c7);
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      color: white;
+      color: #1b4332;
       overflow: hidden;
     }
 
     .container {
       animation: fadeIn 2s ease-in-out;
+      background: rgba(255, 255, 255, 0.3);
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 2.8rem;
     }
 
     p {
@@ -31,19 +36,18 @@
     }
 
     button {
-      padding: 10px 20px;
+      padding: 12px 25px;
       border: none;
       border-radius: 25px;
       font-size: 1rem;
       cursor: pointer;
-      background: white;
-      color: #ff4e50;
+      background: #2d6a4f;
+      color: white;
       transition: 0.3s;
     }
 
     button:hover {
-      background: #ff4e50;
-      color: white;
+      background: #1b4332;
     }
 
     @keyframes fadeIn {
@@ -63,33 +67,46 @@
     }
   </style>
 </head>
+
 <body>
 
-<div class="container">
-  <h1>Happy Valentine's ❤️</h1>
-  <p>You are my favorite person, my peace, and my happiness.</p>
-  <button onclick="showMessage()">Click Me 💌</button>
-</div>
+  <div class="container">
+    <h1>Happy Valentine's Day Polynile ❤️</h1>
 
-<script>
-  function showMessage() {
-    alert("I love you more than words can explain ❤️");
-  }
+    <p>
+      Polynile, you are my peace, my happiness, and my greatest blessing.
+      Every day with you feels special, but today I just want you to know
+      how deeply I love and appreciate you.
+    </p>
 
-  // Floating hearts
-  setInterval(() => {
-    const heart = document.createElement("div");
-    heart.classList.add("heart");
-    heart.innerHTML = "❤️";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = Math.random() * 20 + 15 + "px";
-    document.body.appendChild(heart);
+    <button onclick="showMessage()">Open My Heart 💌</button>
 
-    setTimeout(() => {
-      heart.remove();
-    }, 5000);
-  }, 300);
-</script>
+    <p id="hiddenMessage" style="margin-top:20px; display:none; font-size:1.2rem;">
+      I love you more than words can explain ❤️ <br><br>
+      Yours truly,<br>
+      <strong>Rotich 💕</strong>
+    </p>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById("hiddenMessage").style.display = "block";
+    }
+
+    // Floating hearts animation
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = Math.random() * 20 + 15 + "px";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }, 300);
+  </script>
 
 </body>
 </html>
